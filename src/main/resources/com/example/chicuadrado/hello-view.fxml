@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="759.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chicuadrado.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Label layoutX="101.0" layoutY="14.0" prefHeight="32.0" prefWidth="286.0" text="Metodo Chi Cuadrado" textAlignment="CENTER">
+      <font>
+         <Font name="Bodoni MT Black" size="25.0" />
+      </font></Label>
+   <TextField fx:id="KField" layoutX="165.0" layoutY="84.0" prefHeight="26.0" prefWidth="42.0" />
+   <Label layoutX="14.0" layoutY="81.0" prefHeight="32.0" prefWidth="18.0" text="K">
+      <font>
+         <Font size="22.0" />
+      </font>
+   </Label>
+   <Label layoutX="10.0" layoutY="131.0" text="Amplitud">
+      <font>
+         <Font size="17.0" />
+      </font></Label>
+   <TextField fx:id="AmpField" layoutX="165.0" layoutY="131.0" prefHeight="26.0" prefWidth="41.0" />
+   <Button fx:id="button" layoutX="47.0" layoutY="287.0" mnemonicParsing="false" onAction="#button" prefHeight="46.0" prefWidth="108.0" text="Generar">
+      <font>
+         <Font size="21.0" />
+      </font></Button>
+   <Label layoutX="10.0" layoutY="178.0" text="Número de datos">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Label>
+   <Label layoutX="308.0" layoutY="64.0" text="Datos">
+      <font>
+         <Font size="23.0" />
+      </font>
+   </Label>
+   <TextField fx:id="numDatos" layoutX="165.0" layoutY="179.0" prefHeight="26.0" prefWidth="42.0" />
+   <TextField fx:id="NcText" layoutX="165.0" layoutY="226.0" prefHeight="26.0" prefWidth="42.0" />
+   <Label layoutX="10.0" layoutY="226.0" text="Nivel de confianza">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </Label>
+   <TextArea fx:id="Datos" layoutX="298.0" layoutY="98.0" prefHeight="236.0" prefWidth="108.0" />
+   <AnchorPane layoutX="45.0" layoutY="429.0" prefHeight="290.0" prefWidth="517.0">
+      <children>
+         <TextField fx:id="ValorX2" editable="false" layoutX="13.0" layoutY="70.0" prefHeight="26.0" prefWidth="99.0" />
+         <Label layoutX="178.0" layoutY="-2.0" text="Resultados:">
+            <font>
+               <Font size="21.0" />
+            </font>
+         </Label>
+         <TextField editable="false" layoutX="125.0" layoutY="70.0" prefHeight="26.0" prefWidth="106.0" fx:id="x2Prueba" />
+         <TextField fx:id="pruebaHip" editable="false" layoutX="241.0" layoutY="70.0" prefHeight="26.0" prefWidth="278.0" />
+         <Label layoutX="14.0" layoutY="39.0" prefHeight="31.0" prefWidth="49.0" text="Valor X2" />
+         <Label layoutX="125.0" layoutY="46.0" text="Valor X2 Prueba" />
+         <Label layoutX="241.0" layoutY="46.0" text="Prueba de hip" />
+         <TableView fx:id="table" layoutX="12.0" layoutY="105.0" prefHeight="164.0" prefWidth="303.0">
+           <columns>
+             <TableColumn fx:id="clases1" prefWidth="62.200016021728516" text="Clases" />
+             <TableColumn fx:id="clases2" prefWidth="78.0" />
+               <TableColumn fx:id="frecAbs" prefWidth="86.80000305175781" text="Frec abs" />
+               <TableColumn fx:id="frecAcum" prefWidth="75.0" text="Frec acum" />
+           </columns>
+         </TableView>
+         <TableView fx:id="kTable" layoutX="352.0" layoutY="105.0" prefHeight="164.0" prefWidth="151.0">
+           <columns>
+             <TableColumn fx:id="kColumn" prefWidth="75.0" text="kn" />
+             <TableColumn fx:id="valorKColumn" prefWidth="75.0" />
+           </columns>
+         </TableView>
+      </children>
+   </AnchorPane>
+</AnchorPane>
